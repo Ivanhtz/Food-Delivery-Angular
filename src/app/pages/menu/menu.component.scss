@@ -1,0 +1,40 @@
+.main {
+  background-color: rgb(219, 219, 219);
+  padding-bottom: 2rem;
+
+  &__grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__title {
+    color: black;
+    text-align: center;
+    padding: 1.5rem 0;
+  }
+
+  &__food {
+    width: 20rem;
+    padding: 10px;
+    box-shadow: 5px 5px 5px black;
+    h3 {
+      color: black;
+    }
+
+    img {
+      height: 250px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8.7rem;
+    color: white;
+    margin: 1rem 0;
+  }
+}

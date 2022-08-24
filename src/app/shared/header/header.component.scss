@@ -1,0 +1,99 @@
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5rem;
+  background-color: black;
+
+  position: sticky;
+  top: 0%;
+  z-index: 2;
+
+  @media screen and (min-width: 450px) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-around;
+
+    .header__nav {
+      display: block;
+    }
+
+    .menu__burguer {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    gap: 0.7rem;
+  }
+  &__icon {
+    width: 2.5rem;
+  }
+
+  &__nav {
+    display: none;
+  }
+
+  &__ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+
+    a {
+      padding: 1rem;
+    }
+
+    a:hover {
+      color: white;
+    }
+  }
+}
+
+.menu__burguer {
+  margin-top: 1rem;
+  border: 1px solid var(--title-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--title-color);
+  border-radius: 50%;
+  padding: 0.6rem;
+  height: 50px;
+  width: 50px;
+}
+
+.mobilMenu {
+  background-color: var(--main-color);
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 2.5rem;
+  height: 100vh;
+
+  ul {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5rem;
+  }
+}

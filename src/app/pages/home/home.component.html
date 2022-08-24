@@ -1,0 +1,54 @@
+<main class="home">
+  <section class="home__hero">
+    <div class="hero__flex">
+      <h1 class="hero__title">Fresh Cooked Food At Your Door</h1>
+      <a class="hero__btn btn" routerLink="menu">Order Now →</a>
+    </div>
+  </section>
+
+  <section class="home__info">
+    <h2 class="home__info__title">
+      How to get <span class="special__text">fresh food</span>
+    </h2>
+    <div class="container flex__card">
+      <div class="info__card">
+        <p class="card__number">1</p>
+        <p class="card__text">Select Food</p>
+      </div>
+
+      <div class="info__card">
+        <p class="card__number">2</p>
+        <p class="card__text">Fill the Details</p>
+      </div>
+
+      <div class="info__card">
+        <p class="card__number">3</p>
+        <p class="card__text">Your Order in Minutes</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="home__custom">
+    <h2 class="custom__title">
+      Customers <span class="special__text">Favourites Food</span>
+    </h2>
+
+    <div class="container">
+      <div class="custom__flex2">
+        <div class="custom__flex" *ngFor="let food of foodData; index as i">
+          <div class="custom__food" *ngIf="i < 4">
+            <img src="{{ food.foodImg }}" alt="food img" />
+            <h3>{{ food.foodName }}</h3>
+            <p>{{ food.foodPrice | currency: "EUR" }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="custom__btn">
+        <a class="btn" routerLink="menu">Show More</a>
+      </div>
+    </div>
+  </section>
+</main>
